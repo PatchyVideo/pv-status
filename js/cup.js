@@ -37,6 +37,8 @@ myApp.dashboard = (function($) {
     showQueue = [];
     _hasError = false;
 
+    updateLoaded()
+
     for (var i in __apiKeys) {
       getUptime(__apiKeys[i], i);
     }
@@ -275,6 +277,8 @@ myApp.dashboard = (function($) {
       }
     }
 
+    updateLoaded()
+
     if (_loaded === __apiKeys.length) {
       $('.set-tooltip').tooltip({
         html: true
@@ -288,6 +292,11 @@ myApp.dashboard = (function($) {
         $('#stattip-err').addClass('hide');
       }
     }
+  }
+  /* update loaded apis */
+  function updateLoaded() {
+    $('#loaded').text(_loaded);
+    $('#total').text(__apiKeys.length);
   }
   /* count down till next refresh */
   function countdown() {

@@ -113,14 +113,22 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-10 col-lg-offset-1">
+        <div class="alert alert-info" role="alert">
+          <b>节点解释：</b><br />
+          前端：网站静态部分（如排版、错误页）&nbsp;后端：网站动态部分（如视频详情、用户数据）<br />
+          THV&nbsp;->&nbsp;<a href="https://thvideo.tv/">https://thvideo.tv/</a>&nbsp;(zyddnys &amp; 囧仙)<br />
+          PV&nbsp;->&nbsp;<a href="https://patchyvideo.com/">https://patchyvideo.com/</a>&nbsp;(有顶天网络 &amp; zyddnys)<br />
+          Wiki&nbsp;->&nbsp;<a href="https://patchyvideo.wiki/">https://patchyvideo.wiki/</a>&nbsp;(有顶天网络 &amp; freesia)<br />
+          （注：前端问题主要体现为白页或网页异常，后端问题多数情况会直接进入错误页。）
+        </div>
         <div id="stattip-err" class="alert alert-warning hide" role="alert">
-          <b>当前状态：</b>PatchyVideo 部分服务发生异常，我们将尽快修复。
+          <b>当前状态：</b>PatchyVideo 部分服务发生异常，我们将尽快修复。若异常长时间未解决，可以通过底部的联系方式找到我们。
         </div>
         <div id="stattip-ok" class="alert alert-success hide" role="alert">
           <b>当前状态：</b>PatchyVideo 所有服务正常运行中，没有发现异常。
         </div>
         <div id="stattip-load" class="alert alert-info" role="alert">
-          <b>当前状态：</b>正在检测运行状态，请稍候..
+          <b>当前状态：</b>正在获取运行状态，可能需要一些时间，如遇到问题请尝试刷新页面。(<span id="loaded"></span>/<span id="total"></span>)
         </div>
         <div class="table-responsive">
           <table class="table table-hover check">
@@ -137,7 +145,12 @@
   <div class="footer">
     <div class="container">
       <p><span class="glyphicon glyphicon-refresh"></span> <span id="last-update"></span></p>
-      <p class="credit">Powered by <a href="https://github.com/CoolQ/Cup" target="_blank">Cup</a></p>
+      <p class="credit">
+        QQ: <a href="https://jq.qq.com/?k=fOJYEJt1" rel="noopener noreferrer">757676234</a> | Telegram:
+        <a href="https://t.me/PatchyVideo" rel="noopener noreferrer">t.me/PatchyVideo</a> | Email:
+        <a href="mailto:zyddnys@outlook.com" rel="noopener noreferrer">zyddnys@outlook.com</a>
+      </p>
+      <p class="credit">&copy; 2020 PatchyVideo &amp; Coxxs. Powered by <a href="https://github.com/CoolQ/Cup" target="_blank">Cup</a>.</p>
     </div>
   </div>
   <script type="template/mustache" id="server-template">
