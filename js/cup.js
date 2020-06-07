@@ -216,7 +216,7 @@ myApp.dashboard = (function($) {
         } else {
           stattip += " (" + new Number((stat.right - stat.left) / (1000 * 3600)).toFixed(1) + " 小时)";
         }
-        stattip += "<br><span class=\"ttime\">" + num2string(stat.left) + " ~ " + num2string(stat.right) + "</span>";
+        stattip += "<br /><span class=\"ttime\">" + num2string(stat.left) + " ~ " + num2string(stat.right) + "</span>";
       }
       data.progress.push({
         typeid: stat.typeid,
@@ -237,12 +237,14 @@ myApp.dashboard = (function($) {
         minutes = (100 - uptimes[a]) / 100 * 1440;
       }
       hours = minutes / 60;
-      if (uptimes[a] >= 99.99) {
+      if (uptimes[a] == 100) {
         uptimetext[a] = "可用率 100%";
+      } else if (uptimes[a] >= 99.99) {
+        uptimetext[a] = "可用率 ≈100%";
       } else if (minutes < 60) {
-        uptimetext[a] = "可用率 " + new Number(uptimes[a]).toFixed(2) + "%<br>故障 " + new Number(minutes).toFixed(0) + " 分钟";
+        uptimetext[a] = "可用率 " + new Number(uptimes[a]).toFixed(2) + "%<br />故障 " + new Number(minutes).toFixed(0) + " 分钟";
       } else {
-        uptimetext[a] = "可用率 " + new Number(uptimes[a]).toFixed(2) + "%<br>故障 " + new Number(hours).toFixed(1) + " 小时";
+        uptimetext[a] = "可用率 " + new Number(uptimes[a]).toFixed(2) + "%<br />故障 " + new Number(hours).toFixed(1) + " 小时";
       }
     }
     //uptimes.push(data.alltimeuptimeratio);
