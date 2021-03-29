@@ -6,7 +6,8 @@ var __apiKeys = [
 	"m784708483-8e9a08531874492ba4af150b", // pv-be
 	"m784715864-599a7c20401cc4cf6cc27f38", // wiki-fe
 	"m784715863-3217dcfc6efb4cf23fd466ad", // wiki-be
-	"m787659505-7b309bcdec1714c2f5d74f6f" // pt-fe
+	"m787659505-7b309bcdec1714c2f5d74f6f", // pt-fe
+	"m787659684-a3825629de02f534f6dc14ef" // pt-be
 ];
 
 // refresh interval (in seconds)
